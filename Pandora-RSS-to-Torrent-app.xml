@@ -4,7 +4,7 @@
     <filename>Pandora-RSS-to-Torrent</filename> 
     <initialWindow> 
         <content>Pandora-RSS-to-Torrent.html</content> 
-        <visible>true</visible> 
+        <visible>false</visible> 
         <width>500</width> 
         <height>700</height> 
     </initialWindow> 

@@ -18,6 +18,10 @@ div#settings {
   padding: 8px 0px;
 }
 
+div#settings input#rss_feed {
+  width: 350px;
+}
+
 div#content {
   
 }
