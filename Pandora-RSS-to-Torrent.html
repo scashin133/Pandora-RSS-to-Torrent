@@ -23,6 +23,7 @@
               var album = item.find("Album").text();
               var artist = item.find("Artist").text();
               var link = item.find("link").text();
+              var albumArt = item.find("albumArtUrl").text();
               
               var li_class = "favorite";
               if((i % 2) == 0){
@@ -30,11 +31,13 @@
               } else {
                 li_class += " odd"
               }
+              
               var html = "<li class=\"" + li_class + "\">";
-              html += "<p><a class=\"external\" href=\"" + link + "\">Pandora Info</a></p>"
+              html += "<div class='information'<p><a class=\"external\" href=\"" + link + "\">Pandora Info</a></p>"
               html += "<p><b>Song: </b><a class=\"external\" href=\"http://torrentz.com/search?q=" + escape($.trim(song)) + "\">" + song + "</a></p>";
               html += "<p><b>Album: </b><a class=\"external\" href=\"http://torrentz.com/search?q=" + escape($.trim(album)) + "\">" + album + "</a></p>";
-              html += "<p><b>Artist: </b><a class=\"external\" href=\"http://torrentz.com/search?q=" + escape($.trim(artist)) + "\">" + artist + "</a></p></li>";
+              html += "<p><b>Artist: </b><a class=\"external\" href=\"http://torrentz.com/search?q=" + escape($.trim(artist)) + "\">" + artist + "</a></p></div>";
+              html += "<div class='media'><img src='" + albumArt + "' /></div></li>";
               
               $(html).externalLinks().appendTo(list);
               
