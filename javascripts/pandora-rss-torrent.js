@@ -34,7 +34,6 @@
     //open connection to settings.db database
     db = new air.SQLConnection();
     db.addEventListener( air.SQLEvent.OPEN, onDatabaseOpen );
-    air.Introspector.Console.log(db);
     db.open( air.File.applicationDirectory.resolvePath("settings.db"), air.SQLMode.CREATE );        
 
   };

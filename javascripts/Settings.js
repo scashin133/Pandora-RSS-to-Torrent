@@ -6,7 +6,6 @@ var Settings = {
     
     //this method will load the settings from the db
     __load: function(dbconn) {
-        // air.Introspector.Console.log(dbconn);
         Settings.__db = dbconn;
         
         //execute simple select * on the settings table

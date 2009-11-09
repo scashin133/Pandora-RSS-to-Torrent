@@ -2,7 +2,6 @@
   <head> 
       <link type="text/css" href="stylesheets/reset.css" rel="stylesheet" /> 
       <link type="text/css" href="stylesheets/pandora-rss-torrent.css" rel="stylesheet" /> 
-      <script src="javascripts/AIRIntrospector.js" type="text/javascript"></script>
       <script src="javascripts/AIRAliases.js" type="text/javascript"></script>
       <script src="swfs/applicationupdater.swf" type="application/x-shockwave-flash"/>
       <script src="javascripts/Settings.js" type="text/javascript"></script>
@@ -12,11 +11,13 @@
       <script src="javascripts/pandora-rss-torrent.js" type="text/javascript"></script>
       <script type="text/javascript">
         $(document).ready(function(){
+          var appUpdater = new runtime.air.update.ApplicationUpdater(); 
+          appUpdater.configurationFile = new air.File("app:/updateConfig.xml"); 
+          appUpdater.initialize();
           $("body").initializeAppDb();
           
           $("div#settings form").submit(function(e){
             e.preventDefault();
-            air.Introspector.Console.log(Settings.feed);
             Settings.feed = $("input#rss_feed").val();
             grabContent();
           });
