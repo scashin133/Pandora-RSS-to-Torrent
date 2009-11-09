@@ -1,6 +1,6 @@
 <application xmlns="http://ns.adobe.com/air/application/1.5">
     <id>com.pandora.torrentz.personal</id>
-    <version>0.2</version> 
+    <version>0.3</version> 
     <filename>Pandora-RSS-to-Torrent</filename> 
     <initialWindow> 
         <content>Pandora-RSS-to-Torrent.html</content> 
